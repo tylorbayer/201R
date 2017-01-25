@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CS 201R Activity 2</title>
+        <style>
+            .city {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" id="citySearch" oninput="searchScript(this.value)" placeholder="Enter a city in Utah..">
+            
+        <div>
+            <ul id="cityUL">
+                <li class="city">Alpine</li>
+                <li class="city">Altamont</li>
+                <li class="city">Alton</li>
+                <li class="city">Altonah</li>
+                <li class="city">American Fork</li>
+                <li class="city">Aneth</li>
+                <li class="city">Annabella</li>
+                <li class="city">Antimony</li>
+                <li class="city">Aurora</li>
+                <li class="city">Axtell</li>
+                <li class="city">Bear River City</li>
+                <li class="city">Beaver</li>
+                <li class="city">Beryl</li>
+                <li class="city">Bicknell</li>
+                <li class="city">Bingham Canyon</li>
+                <li class="city">Blanding</li>
+                <li class="city">Bluebell</li>
+                <li class="city">Bluff</li>
+                <li class="city">Bonanza</li>
+                <li class="city">Boulder</li>
+                <li class="city">Bountiful</li>
+                <li class="city">Brian Head</li>
+                <li class="city">Brigham City</li>
+                <li class="city">Bryce</li>
+                <li class="city">Bryce Canyon</li>
+                <li class="city">Cache Junction</li>
+                <li class="city">Cannonville</li>
+                <li class="city">Castle Dale</li>
+                <li class="city">Cedar City</li>
+                <li class="city">Cedar Valley</li>
+                <li class="city">Centerfield</li>
+                <li class="city">Centerville</li>
+                <li class="city">Central</li>
+                <li class="city">Chester</li>
+                <li class="city">Circleville</li>
+                <li class="city">Cisco</li>
+                <li class="city">Clarkston</li>
+                <li class="city">Clawson</li>
+                <li class="city">Clearfield</li>
+                <li class="city">Cleveland</li>
+                <li class="city">Clinton</li>
+                <li class="city">Coalville</li>
+                <li class="city">Collinston</li>
+                <li class="city">Corinne</li>
+                <li class="city">Cornish</li>
+                <li class="city">Croydon</li>
+                <li class="city">Dammeron Valley</li>
+                <li class="city">Delta</li>
+                <li class="city">Deweyville</li>
+                <li class="city">Draper</li>
+                <li class="city">Duchesne</li>
+                <li class="city">Duck Creek Village</li>
+                <li class="city">Dugway</li>
+                <li class="city">Dutch John</li>
+                <li class="city">East Carbon</li>
+                <li class="city">Echo</li>
+                <li class="city">Eden</li>
+                <li class="city">Elberta</li>
+                <li class="city">Elmo</li>
+                <li class="city">Elsinore</li>
+                <li class="city">Emery</li>
+                <li class="city">Enterprise</li>
+                <li class="city">Ephraim</li>
+                <li class="city">Escalante</li>
+                <li class="city">Eureka</li>
+                <li class="city">Fairview</li>
+                <li class="city">Farmington</li>
+                <li class="city">Fayette</li>
+                <li class="city">Ferron</li>
+                <li class="city">Fielding</li>
+                <li class="city">Fillmore</li>
+                <li class="city">Fort Duchesne</li>
+                <li class="city">Fountain Green</li>
+                <li class="city">Fruitland</li>
+                <li class="city">Garden City</li>
+                <li class="city">Garland</li>
+                <li class="city">Garrison</li>
+                <li class="city">Glendale</li>
+                <li class="city">Glenwood</li>
+                <li class="city">Goshen</li>
+                <li class="city">Grantsville</li>
+                <li class="city">Green River</li>
+                <li class="city">Greenville</li>
+                <li class="city">Greenwich</li>
+                <li class="city">Grouse Creek</li>
+                <li class="city">Gunlock</li>
+                <li class="city">Gunnison</li>
+                <li class="city">Gusher</li>
+                <li class="city">Hanksville</li>
+                <li class="city">Hanna</li>
+                <li class="city">Hatch</li>
+                <li class="city">Heber City</li>
+                <li class="city">Helper</li>
+                <li class="city">Henefer</li>
+                <li class="city">Henrieville</li>
+                <li class="city">Hiawatha</li>
+                <li class="city">Hildale</li>
+                <li class="city">Hill AFB</li>
+                <li class="city">Hinckley</li>
+                <li class="city">Holden</li>
+                <li class="city">Honeyville</li>
+                <li class="city">Hooper</li>
+                <li class="city">Howell</li>
+                <li class="city">Huntington</li>
+                <li class="city">Huntsville</li>
+                <li class="city">Hurricane</li>
+                <li class="city">Hyde Park</li>
+                <li class="city">Hyrum</li>
+                <li class="city">Ibapah</li>
+                <li class="city">Ivins</li>
+                <li class="city">Jensen</li>
+                <li class="city">Joseph</li>
+                <li class="city">Junction</li>
+                <li class="city">Kamas</li>
+                <li class="city">Kanab</li>
+                <li class="city">Kanarraville</li>
+                <li class="city">Kanosh</li>
+                <li class="city">Kaysville</li>
+                <li class="city">Kenilworth</li>
+                <li class="city">Kingston</li>
+                <li class="city">Koosharem</li>
+                <li class="city">La Sal</li>
+                <li class="city">La Verkin</li>
+                <li class="city">Lake Powell</li>
+                <li class="city">Laketown</li>
+                <li class="city">Lapoint</li>
+                <li class="city">Layton</li>
+                <li class="city">Leamington</li>
+                <li class="city">Leeds</li>
+                <li class="city">Lehi</li>
+                <li class="city">Levan</li>
+                <li class="city">Lewiston</li>
+                <li class="city">Lindon</li>
+                <li class="city">Loa</li>
+                <li class="city">Logan</li>
+                <li class="city">Lyman</li>
+                <li class="city">Lynndyl</li>
+                <li class="city">Magna</li>
+                <li class="city">Manila</li>
+                <li class="city">Manti</li>
+                <li class="city">Mantua</li>
+                <li class="city">Mapleton</li>
+                <li class="city">Marysvale</li>
+                <li class="city">Mayfield</li>
+                <li class="city">Meadow</li>
+                <li class="city">Mendon</li>
+                <li class="city">Mexican Hat</li>
+                <li class="city">Mclassvale</li>
+                <li class="city">Mclassway</li>
+                <li class="city">Milford</li>
+                <li class="city">Millville</li>
+                <li class="city">Minersville</li>
+                <li class="city">Moab</li>
+                <li class="city">Modena</li>
+                <li class="city">Mona</li>
+                <li class="city">Monroe</li>
+                <li class="city">Montezuma Creek</li>
+                <li class="city">Monticello</li>
+                <li class="city">Morgan</li>
+                <li class="city">Moroni</li>
+                <li class="city">Mount Carmel</li>
+                <li class="city">Mount Pleasant</li>
+                <li class="city">Mountain Home</li>
+                <li class="city">Myton</li>
+                <li class="city">Neola</li>
+                <li class="city">Nephi</li>
+                <li class="city">New Harmony</li>
+                <li class="city">Newcastle</li>
+                <li class="city">Newton</li>
+                <li class="city">North Salt Lake</li>
+                <li class="city">Oak City</li>
+                <li class="city">Oakley</li>
+                <li class="city">Oasis</li>
+                <li class="city">Ogden</li>
+                <li class="city">Orangeville</li>
+                <li class="city">Orderville</li>
+                <li class="city">Orem</li>
+                <li class="city">Panguitch</li>
+                <li class="city">Paradise</li>
+                <li class="city">Paragonah</li>
+                <li class="city">Park City</li>
+                <li class="city">Park Valley</li>
+                <li class="city">Parowan</li>
+                <li class="city">Payson</li>
+                <li class="city">Peoa</li>
+                <li class="city">Pine Valley</li>
+                <li class="city">Pleasant Grove</li>
+                <li class="city">Plymouth</li>
+                <li class="city">Portage</li>
+                <li class="city">Price</li>
+                <li class="city">Provclassence</li>
+                <li class="city">Provo</li>
+                <li class="city">Randlett</li>
+                <li class="city">Randolph</li>
+                <li class="city">Redmond</li>
+                <li class="city">Richfield</li>
+                <li class="city">Richmond</li>
+                <li class="city">Riversclasse</li>
+                <li class="city">Riverton</li>
+                <li class="city">Rockville</li>
+                <li class="city">Roosevelt</li>
+                <li class="city">Roy</li>
+                <li class="city">Rush Valley</li>
+                <li class="city">Saint George</li>
+                <li class="city">Salem</li>
+                <li class="city">Salina</li>
+                <li class="city">Salt Lake City</li>
+                <li class="city">Sandy</li>
+                <li class="city">Santa Clara</li>
+                <li class="city">Santaquin</li>
+                <li class="city">Scipio</li>
+                <li class="city">Sevier</li>
+                <li class="city">Sigurd</li>
+                <li class="city">Smithfield</li>
+                <li class="city">Snowville</li>
+                <li class="city">South Jordan</li>
+                <li class="city">South Willard</li>
+                <li class="city">Spanish Fork</li>
+                <li class="city">Spring City</li>
+                <li class="city">Springdale</li>
+                <li class="city">Springville</li>
+                <li class="city">Sterling</li>
+                <li class="city">Stockton</li>
+                <li class="city">Summit</li>
+                <li class="city">Sunnysclasse</li>
+                <li class="city">Syracuse</li>
+                <li class="city">Tabiona</li>
+                <li class="city">Talmage</li>
+                <li class="city">Teasdale</li>
+                <li class="city">Thompson</li>
+                <li class="city">Tooele</li>
+                <li class="city">Toquerville</li>
+                <li class="city">Torrey</li>
+                <li class="city">Tremonton</li>
+                <li class="city">Trenton</li>
+                <li class="city">Trclassell</li>
+                <li class="city">Tropic</li>
+                <li class="city">Vernal</li>
+                <li class="city">Vernon</li>
+                <li class="city">Veyo</li>
+                <li class="city">Virgin</li>
+                <li class="city">Wales</li>
+                <li class="city">Wallsburg</li>
+                <li class="city">Washington</li>
+                <li class="city">Wellington</li>
+                <li class="city">Wellsville</li>
+                <li class="city">Wendover</li>
+                <li class="city">West Jordan</li>
+                <li class="city">Whiterocks</li>
+                <li class="city">Willard</li>
+                <li class="city">Woodruff</li>
+                <li class="city">Woods Cross</li>
+            </ul>
+        </div>
+        
+        <script>
+            
+            var input = document.getElementById("citySearch");
+            var cityList = document.getElementsByClassName("city");
+            
+            var searchScript = function(inputText) {
+                var i = 0;
+                var inputLen = inputText.length;
+                for (i = 0; i < cityList.length; i++) {
+                    if (cityList[i].textContent.toUpperCase().startsWith(inputText.toUpperCase()) == true && inputText.length != 0) {
+                        cityList[i].style.display = "block";
+                    }
+                    else {
+                        cityList[i].style.display = "none";
+                    }
+                }
+            }
+        
+            //input.addEventListener("input", searchScript);
+        
+        </script>
+        
+    </body>
+</html>
